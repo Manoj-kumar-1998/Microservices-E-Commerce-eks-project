@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "manoj-dev-project2"
+    bucket = "manoj-dev-bucket2"
     key    = "ecr/terraform.tfstate"
     region = "us-east-1"
   }
