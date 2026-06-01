@@ -1,5 +1,13 @@
 pipeline {
     agent any 
+environment {
+                GIT_REPO_NAME = "Microservices-E-Commerce-eks-project"
+                GIT_EMAIL = "mk8187649@gmail.com"
+                GIT_USER_NAME = "Manoj-kumar-1998"
+                IMAGE_NAME = "paymentservice"
+                REPO_URL = "002771502673.dkr.ecr.us-east-1.amazonaws.com/cartservice"
+                YAML_FILE = "paymentservice.yaml"
+            }
 
     stages {
         stage('Cleaning Workspace') {
@@ -28,13 +36,13 @@ pipeline {
                 script {
                     sh '''
                     #Retrieve an authentication token and authenticate your Docker client to your registry. Use the AWS CLI:
-                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 242201296943.dkr.ecr.us-east-1.amazonaws.com
+                    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 002771502673.dkr.ecr.us-east-1.amazonaws.com
 
                     #After the build completes, tag your image so you can push the image to this repository:
-                    docker tag paymentservice:latest 242201296943.dkr.ecr.us-east-1.amazonaws.com/paymentservice:${BUILD_NUMBER}
+                    docker tag paymentservicelatest ${REPO_URL}:${BUILD_NUMBER}
 
                     #Run the following command to push this image to your newly created AWS repository:
-                    docker push 242201296943.dkr.ecr.us-east-1.amazonaws.com/paymentservice:${BUILD_NUMBER}
+                    docker push ${REPO_URL}:${BUILD_NUMBER}
                     '''
                 }
             }
