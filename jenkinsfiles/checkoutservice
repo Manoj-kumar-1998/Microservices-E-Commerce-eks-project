@@ -5,7 +5,7 @@ environment {
                 GIT_EMAIL = "mk8187649@gmail.com"
                 GIT_USER_NAME = "Manoj-kumar-1998"
                 IMAGE_NAME = "checkoutservice"
-                REPO_URL = "002771502673.dkr.ecr.us-east-1.amazonaws.com/cartservice"
+                REPO_URL = "002771502673.dkr.ecr.us-east-1.amazonaws.com/checkoutservice"
                 YAML_FILE = "checkoutservice.yaml"
             }
 
