@@ -48,14 +48,7 @@ environment {
             }
         }
         stage('Update Deployment file') {
-            environment {
-                GIT_REPO_NAME = "Microservices-E-Commerce-eks-project"
-                GIT_EMAIL = "Yaswanth.arumulla@gmail.com"
-                GIT_USER_NAME = "arumullayaswanth"
-                IMAGE_NAME = "paymentservice"
-                REPO_URL = "242201296943.dkr.ecr.us-east-1.amazonaws.com/paymentservice"
-                YAML_FILE = "paymentservice.yaml"
-            }
+        
             steps {
                 dir('kubernetes-files') {
                     withCredentials([string(credentialsId: 'my-git-pattoken', variable: 'git_token')]) {
