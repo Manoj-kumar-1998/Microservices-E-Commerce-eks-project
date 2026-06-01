@@ -29,7 +29,7 @@ spec:
                 - ALL
             privileged: false
             readOnlyRootFilesystem: true
-          image: 002771502673.dkr.ecr.us-east-1.amazonaws.com/cartservice:2
+          image: 002771502673.dkr.ecr.us-east-1.amazonaws.com/frontend:3
           ports:
           - containerPort: 8080
           readinessProbe:
