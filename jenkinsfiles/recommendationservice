@@ -4,7 +4,7 @@ environment {
                 GIT_REPO_NAME = "Microservices-E-Commerce-eks-project"
                 GIT_EMAIL = "mk8187649@gmail.com"
                 GIT_USER_NAME = "Manoj-kumar-1998"
-                IMAGE_NAME = "productcatalogservice"
+                IMAGE_NAME = "recommendationservice"
                 REPO_URL = "002771502673.dkr.ecr.us-east-1.amazonaws.com/recommendationservice"
                 YAML_FILE = "recommendationservice.yaml"
             }
