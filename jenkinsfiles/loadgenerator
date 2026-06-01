@@ -4,9 +4,9 @@ environment {
                 GIT_REPO_NAME = "Microservices-E-Commerce-eks-project"
                 GIT_EMAIL = "mk8187649@gmail.com"
                 GIT_USER_NAME = "Manoj-kumar-1998"
-                IMAGE_NAME = "frontend"
+                IMAGE_NAME = "loadgenerator"
                 REPO_URL = "002771502673.dkr.ecr.us-east-1.amazonaws.com/cartservice"
-                YAML_FILE = "frontend.yaml"
+                YAML_FILE = "loadgenerator.yaml"
             }
 
     stages {
